@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Example Form</title>
+<script type = "text/javascript" src = "formValid.js" > </script>
+<style type="text/css"> 
+#outerDiv {  
+	position:absolute;  
+	margin:10px 10px 10px 10px;  
+	width:95%;  
+	height:840px;  
+	border:1px solid gray; 
+	padding : 10px; 
+	background :  #B2BEB5;
+} 
+#header {  
+	position:relative;  
+	margin:5px 5px 5px 5px;  
+	width:98%;  
+	height:80px;  
+	border:1px solid gray; 
+	padding : 6px; 
+	color :  	#7FFFD4;
+	background : #C46210;
+} 
+#form {  
+	position:relative;  
+	margin:5px 5px 5px 5px;  
+	width:98%;  
+	height:600px;  
+	border:1px solid gray; 
+	padding : 6px; 
+	background : #FAEBD7;
+}
+#form form div{
+	position:relative; 
+	oveflow : hidden;	
+	margin:5px 5px 5px 5px;  
+	width:70%;  
+	height:20px;  
+	padding : 6px; 
+--	border : 1px solid black;
+}
+
+#footer {  
+	position:relative;  
+	margin:5px 5px 5px 5px;  
+	width:98%;  
+	color :  	#7FFFD4;
+	height:100px;  
+	border:1px solid gray; 
+	padding : 6px; 
+	background : #C46210;
+}
+span{
+	color : red;
+	font-weight : bold;
+}
+</style>
+</head>
+<body onload = "loadEvents()">
+
+<div id = "outerDiv">
+	<div id = "header">
+		<center><h1>Form Sample</h1></center>
+	</div>
+	
+	<div id = "form">
+		<form id="sampleForm" method="get" action="">
+			<div id = "fnameDiv">
+				<label id = "fnameLbl" for="fname">First Name</label>
+				<input id="fname" name="fname" type="text" />
+			</div>
+			<div  id = "lnameDiv">
+				<label id = "lnameLbl" for="lname">Last Name</label>
+				<input id="lname" name="lname" type="text" />
+			</div>
+			<div  id = "emailDiv">
+				<label id = "emailLbl" for="email">Email Id</label>
+				<input id="email" name="email" type="text" />
+			</div>
+			<div  id = "genderDiv">
+				<label id = "genderLbl" for="gender">Gender</label>
+				<select id = "gender">
+					<option value = "Male">Male</option>
+					<option value = "Female">Female</option>
+				</select>
+			</div>
+			<div  id = "dobDiv">
+				<label id = "dobLbl" for="dob">DOB</label>
+				<select id = "dob1"> </select><label id = "dobhfn1">-</label><select id = "dob2"> </select><label id = "dobhfn2">-</label><select id = "dob3"></select>
+			</div>
+			<div  id = "countryDiv">
+				<label id = "countryLbl" for="country">Country</label>
+				<select  id="country" name ="country" width = "150px" ></select>
+			</div>
+			<div  id = "stateDiv">
+				<label id = "stateLbl" for="state">State</label>
+				<select name ="state" id ="state" width = "150px" ></select>
+			</div>
+			<div  id = "contactDiv">
+				<label id = "contactLbl" for="contact">Contact For</label>
+				<input type="radio" name="contact" value="Business"> Business
+				<input type="radio" name="contact" value="Project"> Project
+				<input type="radio" name="contact" value="Visit"> Visit 
+				<input type="radio" name="contact" value="Other"> Other
+			</div>
+			<div  id = "qualificationDiv">
+				<label id = "qualificationLbl" for="qualification">Highest Qualification</label>
+				<input type="checkbox"  name="qualification" value="MTech"> MTech
+				<input type="checkbox"  name="qualification" value="MCA"> MCA
+				<input type="checkbox"  name="qualification" value="BTech"> BTech 
+				<input type="checkbox"  name="qualification" value="Other"> Other
+			</div>
+			<div  id = "phoneNumDiv">
+				<label id = "phoneNumLbl" for="phoneNum">Phone Number</label>
+				<input type="text" id = "phoneNum1" name="phoneNum1" title = "Area Code" maxlength = "3" size = "3" ><label id = "phoneNumhfn1">-</label>
+				<input type="text" id = "phoneNum2" name="phoneNum2" title = "Exchange" maxlength = "3"  size = "3" ><label id = "phoneNumhfn2">-</label>
+				<input type="text" id = "phoneNum3" name="phoneNum3" title = "Number"  maxlength = "4"  size = "4" >
+			</div>
+			<div  id = "mobNumDiv">
+				<label id = "mobNumLbl" for="mobNum">Mobile Number</label>
+				<input type="text" id = "mobNum" name="mobNum">
+			</div>
+			<div  id = "sbmtBtnDiv">
+				<input type = "button" id = "sbmtBtn" value = "Submit" onclick = "Validate()">
+				<span id = "AllReq">  * Marked Fields are Mandatory.</span>
+			</div>
+		</form>
+	</div>
+	
+	<div id = "footer">
+		<center><h3>This is an Example</h3></center>
+	</div>
+</div>
+
+</body>
+</html>
